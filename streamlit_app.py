@@ -6,7 +6,7 @@ st.write("""
 """)
 
 # Especifica la ruta completa del archivo Excel
-df = pd.read_excel(r"Datos No llame - actual.xlsx", sheet_name="Hoja1")
+df = pd.read_excel(r"Nollame/Datos No llame - actual.xlsx", sheet_name="Hoja1")
 
 # Verifica si el DataFrame tiene datos antes de graficar
 if not df.empty:
