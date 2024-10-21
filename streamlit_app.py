@@ -1,6 +1,15 @@
 import streamlit as st
+import pandas as pd
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+st.write("""
+# Hello *world!*
+""")
+
+# Especifica la ruta completa del archivo Excel
+df = pd.read_excel(r"Datos No llame - actual.xlsx", sheet_name="Hoja1")
+
+# Verifica si el DataFrame tiene datos antes de graficar
+if not df.empty:
+    df[['Numeros']]
+else:
+    st.write("El DataFrame está vacío.")
