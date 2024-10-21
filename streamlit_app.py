@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 
 st.write("""
-# Hello *world!*
+# App no llame
 """)
 
 # Especifica la ruta completa del archivo Excel
-df = pd.read_excel(r"/Nollame/Datos No llame - actual.xlsx", sheet_name="Hoja1")
+df = pd.read_excel(r"Datos No llame - actual.xlsx")
 
 # Verifica si el DataFrame tiene datos antes de graficar
 if not df.empty:
