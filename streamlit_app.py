@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 
 st.write("""
-# App no llame
+# App - No llame
 """)
-st.logo(image="flowblanco.jpg")
+#st.logo(image="flowblanco.jpg")
 
 # Especifica la ruta completa del archivo Excel
 df = pd.read_excel(r"Datos No llame - actual.xlsx")
