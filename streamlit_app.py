@@ -10,7 +10,8 @@ st.set_page_config(**PAGE_CONFIG)
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
+                footer {visibility: hidden;}
+
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
