@@ -3,11 +3,11 @@ import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 
 
-PAGE_CONFIG = {"page_title":"No llame","page_icon":":phone:","layout":"centered"}
+PAGE_CONFIG = {"page_title":"No llame","page_icon":"flowlogo.PNG","layout":"centered"}
 st.set_page_config(**PAGE_CONFIG)
 
 st.write("""
-# App - No llame :phone:
+# App - No llame
 """)
 
 # Create a connection object.
@@ -16,21 +16,25 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 df = conn.read()
 #Columna Numeros - str datatype
-df['Numeros'] = df['Numeros'].astype(str)
-# Print results.
-if not df.empty:
-    st.dataframe(df[['Numeros']], height=200, width=500,hide_index=True)
+
+telefonos = df["Numeros"].astype(str)
+
+valor = ""
+busqueda = st.text_input(label="Busca un número sin 0 adelante,sin espacios en blanco y sin código país. (ejemplo: 99123456)", value=valor, type="default", label_visibility="visible")
+
+# Verifica si el input está vacío
+if not busqueda:
+    st.write("")
 else:
-    st.write("El DataFrame está vacío.")
-
-
-#OLD
-#st.logo(image="flowblanco.jpg")
-# Especifica la ruta completa del archivo Excel
-#df = pd.read_excel(r"Datos No llame - actual.xlsx")
-#df['Numeros'] = df['Numeros'].astype(str)
-# Verifica si el DataFrame tiene datos antes de graficar
-#if not df.empty:
-#    st.dataframe(df[['Numeros']], height=200, width=500,hide_index=True)
-#else:
-#    st.write("El DataFrame está vacío.")
+    # Print results.
+    if busqueda in telefonos.values:
+        # Si el número exacto se encuentra, mostrar el mensaje correspondiente
+        st.write("Número encontrado: ", busqueda)
+    else:
+        # Filtrar el DataFrame por el texto ingresado
+        df_filtrado = df[telefonos.str.contains(busqueda, na=False)]
+        df_filtrado = df_filtrado.astype(str)
+        if not df_filtrado.empty:
+            st.dataframe(df_filtrado, height=100, width=500, hide_index=True)
+        else:
+            st.write("No se encontraron coincidencias.")
