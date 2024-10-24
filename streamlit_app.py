@@ -9,8 +9,12 @@ st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            footer:after {
+            footer {
+	
+	visibility: hidden;
+	
+	}
+footer:after {
 	content:'goodbye'; 
 	visibility: visible;
 	display: block;
