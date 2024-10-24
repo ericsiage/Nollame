@@ -8,18 +8,7 @@ st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
 
 hide_streamlit_style = """
             <style>
-            #MainMenu {visibility: hidden;}
-            #GithubIcon {visibility: hidden;}
-            footer {visibility: hidden;}
-            footer:after {
-	        content:'goodbye'; 
-	        visibility: visible;
-	        display: block;
-	        position: relative;
-	        #background-color: red;
-	        padding: 5px;
-	        top: 2px;}
-            header {visibility: hidden;}
+            .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob, .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK{ display: none; } #MainMenu{ visibility: hidden; } footer { visibility: hidden; } header { visibility: hidden; }
             </style>
                         """
 
