@@ -2,8 +2,12 @@ import streamlit as st
 import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 
+
+PAGE_CONFIG = {"page_title":"No llame","page_icon":":phone:","layout":"centered"}
+st.set_page_config(**PAGE_CONFIG)
+
 st.write("""
-# App - No llame
+# App - No llame :phone:
 """)
 
 # Create a connection object.
