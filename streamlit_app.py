@@ -3,11 +3,21 @@ import pandas as pd
 from streamlit_gsheets import GSheetsConnection
 
 
+
 PAGE_CONFIG = {"page_title":"No llame","page_icon":"flowlogo.PNG","layout":"centered"}
 st.set_page_config(**PAGE_CONFIG)
 
-st.write("""
-# App - No llame
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
+#Title
+st.title("""  App - No llame
 """)
 
 # Create a connection object.
