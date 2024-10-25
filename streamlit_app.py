@@ -10,9 +10,10 @@ st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
 st.markdown("""
         <style>
             #MainMenu {visibility: hidden;} footer {visibility: hidden;}
+            .stAppDeployButton {visibility: hidden;}
+            [data-testid="stToolbar"] {visibility: hidden !important;}
             .css-1yi6l {display: none}
-            .css-eczf16 {display: none}
-            .css-jn99sy {display: none}
+            header {visibility: hidden;}
         </style>
         """, unsafe_allow_html=True)
 
