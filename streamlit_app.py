@@ -6,33 +6,16 @@ from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
 
-hide_streamlit_style = """
-             <style>
-             #MainMenu {visibility: hidden;}
-             footer {visibility: hidden;}
-             </style>
-             """
- 
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
- 
-hide_decoration_bar_style = '''
-     <style>
-         header {visibility: hidden;}
-     </style>
- '''
-st.markdown("""<style>
-         .css-15zrgzn {display: none}
-         .css-eczf16 {display: none}
-         .css-jn99sy {display: none}
-         .css-1yi6l_10 {display: none}</style>""", unsafe_allow_html=True)
-st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
- 
-st.markdown(f'''
-         <style>
-             .sidebar .sidebar-content {{
-                 width: 375px;
-             }}
-         </style>''',unsafe_allow_html=True)
+
+st.markdown("""
+        <style>
+            #MainMenu {visibility: hidden;} footer {visibility: hidden;}
+            .css-1yi6l {display: none}
+            .css-eczf16 {display: none}
+            .css-jn99sy {display: none}
+        </style>
+        """, unsafe_allow_html=True)
+
 
 #Title
 st.title("""  App - No llame
