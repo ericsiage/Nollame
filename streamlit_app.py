@@ -8,16 +8,15 @@ st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
 
 hide_streamlit_style = """
             <style>
-            .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob, .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK{ display: none; } #MainMenu{ visibility: hidden; } footer { visibility: hidden; } header { visibility: hidden; }
+                /* Hide the Streamlit header and menu */
+                header {visibility: hidden;}
+                /* Optionally, hide the footer */
+                .streamlit-footer {display: none;}
+                /* Hide your specific div class, replace class name with the one you identified */
+                .st-emotion-cache-uf99v8 {display: none;}
             </style>
-                        """
-
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-#
-
-
-
+            """
+st.markdown(hide_streamlit_style,unsafe_allow_html=True)
 
 #Title
 st.title("""  App - No llame
