@@ -13,7 +13,8 @@ hide_streamlit_style = """
                 /* Optionally, hide the footer */
                 .streamlit-footer {display: none;}
                 /* Hide your specific div class, replace class name with the one you identified */
-                .st-emotion-cache-uf99v8 {display: none;}
+                .st-emotion-cache-_link_1yi6l_10 {display: none;}
+                
             </style>
             """
 st.markdown(hide_streamlit_style,unsafe_allow_html=True)
