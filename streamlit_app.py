@@ -4,16 +4,18 @@ from streamlit_gsheets import GSheetsConnection
 
 
 
-st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
+st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG",initial_sidebar_state="expanded",layout="wide")
 
 
 st.markdown("""
         <style>
-            #MainMenu {visibility: hidden;} footer {visibility: hidden;}
+            #MainMenu {visibility: hidden;} 
+            footer {visibility: hidden;}
             .stAppDeployButton {visibility: hidden;}
             [data-testid="stToolbar"] {visibility: hidden !important;}
             .css-1yi6l {display: none}
             header {visibility: hidden;}
+
         </style>
         """, unsafe_allow_html=True)
 
