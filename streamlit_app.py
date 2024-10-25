@@ -5,19 +5,38 @@ from streamlit_gsheets import GSheetsConnection
 
 
 st.set_page_config(page_title="No llame",page_icon="flowlogo.PNG")
-
 hide_streamlit_style = """
-            <style>
-                /* Hide the Streamlit header and menu */
-                header {visibility: hidden;}
-                /* Optionally, hide the footer */
-                .streamlit-footer {display: none;}
-                /* Hide your specific div class, replace class name with the one you identified */
-                .st-emotion-cache-_link_1yi6l_10 {display: none;}
-                
-            </style>
-            """
-st.markdown(hide_streamlit_style,unsafe_allow_html=True)
+             <style>
+             #MainMenu {visibility: hidden;}
+             footer {visibility: hidden;}
+             </style>
+             """
+ 
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+ 
+hide_decoration_bar_style = '''
+     <style>
+         header {visibility: hidden;}
+     </style>
+ '''
+st.markdown("""
+         <style>
+         .css-15zrgzn {display: none}
+         .css-eczf16 {display: none}
+         .css-jn99sy {display: none}
+         </style>
+         """, unsafe_allow_html=True)
+st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
+ 
+st.markdown(
+     f'''
+         <style>
+             .sidebar .sidebar-content {{
+                 width: 375px;
+             }}
+         </style>
+     ''',
+     unsafe_allow_html=True)
 
 #Title
 st.title("""  App - No llame
